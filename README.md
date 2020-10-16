@@ -1,3 +1,4 @@
+[![noswpatv3](http://zoobab.wdfiles.com/local--files/start/noupcv3.jpg)](https://ffii.org/donate-now-to-save-europe-from-software-patents-says-ffii/)
 PHP bindings for 0MQ. The documentation is available at http://php.net/zmq
 
 [![Build Status](https://travis-ci.org/zeromq/php-zmq.png?branch=master)](https://travis-ci.org/zeromq/php-zmq)
