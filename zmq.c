@@ -142,6 +142,9 @@ static int php_zmq_context_list_entry(void)
 static void php_zmq_context_destroy(php_zmq_context *context)
 {
 	if (context->pid == getpid()) {
+		if (php_zmq_context_socket_count_get(context) > 0) {
+			php_error_docref(NULL, E_WARNING, "php_zmq_context_socket_count_get() > 0, will cause infinite hang on zmq_term, unset all zmqsocket references manually eg. via shutdown func");
+		}
 		(void) zmq_term(context->z_ctx);
 	}
 	pefree(context, context->is_persistent);
